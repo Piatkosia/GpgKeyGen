@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemUtils", "FileSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpgKeyGen.Ui.Tests", "GpgKeyGen.Ui.Tests\GpgKeyGen.Ui.Tests.csproj", "{C4C5BFF1-7376-40D7-A947-63505DFBC175}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralUtils", "GeneralUtils\GeneralUtils.csproj", "{A86EAE35-6774-4D49-96E7-66F790157EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralUtils.Tests", "GeneralUtils.Tests\GeneralUtils.Tests.csproj", "{E44CFEEB-6A4F-41C6-88B1-CF61D4E0679C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{C4C5BFF1-7376-40D7-A947-63505DFBC175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4C5BFF1-7376-40D7-A947-63505DFBC175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4C5BFF1-7376-40D7-A947-63505DFBC175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86EAE35-6774-4D49-96E7-66F790157EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86EAE35-6774-4D49-96E7-66F790157EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86EAE35-6774-4D49-96E7-66F790157EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86EAE35-6774-4D49-96E7-66F790157EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E44CFEEB-6A4F-41C6-88B1-CF61D4E0679C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44CFEEB-6A4F-41C6-88B1-CF61D4E0679C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44CFEEB-6A4F-41C6-88B1-CF61D4E0679C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44CFEEB-6A4F-41C6-88B1-CF61D4E0679C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

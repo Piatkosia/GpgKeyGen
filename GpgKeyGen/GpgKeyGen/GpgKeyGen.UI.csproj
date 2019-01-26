@@ -103,6 +103,10 @@
       <Project>{b5802d9d-adb6-4c86-a537-c1e395a38256}</Project>
       <Name>FileSystemUtils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeneralUtils\GeneralUtils.csproj">
+      <Project>{a86eae35-6774-4d49-96e7-66f790157ead}</Project>
+      <Name>GeneralUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GpgKeyGenWrapper\GpgKeyGenWrapper.csproj">
       <Project>{a57270d4-e6d1-4320-8b23-5a40ec464958}</Project>
       <Name>GpgKeyGenWrapper</Name>

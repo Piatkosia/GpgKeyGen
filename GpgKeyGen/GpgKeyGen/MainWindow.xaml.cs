@@ -30,12 +30,21 @@ namespace GpgKeyGen
 
         private void Generate(object sender, RoutedEventArgs e)
         {
-            return;
+            if (CurrentParams.IsValid())
+            {
+
+            }
+            else MessageBox.Show("Znaleziono następujące błędy:" + System.Environment.NewLine + CurrentParams.ErrorLog);
         }
 
         private void ChangeSettings(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            CurrentParams.Password = KeyPwd.Password;
         }
     }
 }
