@@ -20,18 +20,20 @@ namespace GpgKeyGen
     /// </summary>
     public partial class MainWindow : Window
     {
+        private GeneratorParams CurrentParams { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            GeneratorParams generatorParams = new GeneratorParams();
+            CurrentParams = new GeneratorParams();
+            DataContext = CurrentParams;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Generate(object sender, RoutedEventArgs e)
         {
-
+            return;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ChangeSettings(object sender, RoutedEventArgs e)
         {
 
         }
