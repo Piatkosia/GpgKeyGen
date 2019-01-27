@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FileSystemUtils;
+using GpgKeyGenWrapper;
 
 namespace GpgKeyGen
 {
@@ -32,6 +35,9 @@ namespace GpgKeyGen
         {
             if (CurrentParams.IsValid())
             {
+                string path = FilenameUtils.GetTempFilePathWithExtension(".txt");
+                File.WriteAllText(path, GpgBatchGenerator.GetScript(CurrentParams.ToGpgKeygenParams()));
+
 
             }
             else MessageBox.Show("Znaleziono następujące błędy:" + System.Environment.NewLine + CurrentParams.ErrorLog);

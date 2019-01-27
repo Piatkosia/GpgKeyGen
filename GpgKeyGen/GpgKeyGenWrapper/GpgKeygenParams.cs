@@ -13,5 +13,9 @@ namespace GpgKeyGenWrapper
         public string Email { get; set; }
         public string Comment { get; set; }
         public int ExpiredInDays { get; set; }
+        public string KeyType { get; set; } = "RSA";
+        public uint KeyLength { get; set; } = 2048;
+        public string PublicKeyPath { get; set; } = "pubkey.pub";
+        public string PrivateKeyPath { get; set; } = "privkey.sec";
     }
 }
