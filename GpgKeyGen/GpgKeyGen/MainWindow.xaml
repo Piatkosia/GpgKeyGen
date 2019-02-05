@@ -54,7 +54,7 @@
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
-        <Button Content="Generuj klucze"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1" Click="Generate" Margin="10"/>
+        <Button Content="Generuj klucze"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1" Command="{Binding GenerateCommand}"  Margin="10"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Imię i nazwisko: " TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Adres e-mail:" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Komentarz:" TextAlignment="Center"/>

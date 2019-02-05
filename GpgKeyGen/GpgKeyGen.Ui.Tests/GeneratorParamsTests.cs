@@ -12,11 +12,11 @@ namespace GpgKeyGen.Ui.Tests
         [Fact]
         public void ParamsConverter_IfForCommission_Returns1asExpiredInDays()
         {
-            GeneratorParams par = new GeneratorParams();
+            GeneratorParamsModel par = new GeneratorParamsModel();
             par.Comment = "usdvuyfsgdf";
             par.Email = "iasgf@sd.pl";
             par.Password = "uiadfusdif";
-            par.ForCommission = true;
+            par.OneDay = true;
             par.Username = "asygfuysgfigreg";
             var tosend = par.ToGpgKeygenParams();
             Assert.True(tosend.ExpiredInDays == 1);
@@ -24,11 +24,11 @@ namespace GpgKeyGen.Ui.Tests
         [Fact]
         public void ParamsConverter_IfNotForCommission_Returns0asExpiredInDays()
         {
-            GeneratorParams par = new GeneratorParams();
+            GeneratorParamsModel par = new GeneratorParamsModel();
             par.Comment = "usdvuyfsgdf";
             par.Email = "iasgf@sd.pl";
             par.Password = "uiadfusdif";
-            par.ForCommission = false;
+            par.OneDay = false;
             par.Username = "asygfuysgfigreg";
             var tosend = par.ToGpgKeygenParams();
             Assert.True(tosend.ExpiredInDays == 0);

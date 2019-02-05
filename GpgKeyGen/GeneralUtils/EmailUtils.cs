@@ -19,7 +19,8 @@ namespace GeneralUtils
             {
                 return false;
             }
-            return new Regex(ValidEmailPattern, RegexOptions.IgnoreCase).IsMatch(mailAddress);
+            bool valid = new Regex(ValidEmailPattern, RegexOptions.IgnoreCase).IsMatch(mailAddress);
+            return valid;
         }
 
     }

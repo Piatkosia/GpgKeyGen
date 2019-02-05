@@ -23,11 +23,11 @@ namespace GpgKeyGen
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GeneratorParams CurrentParams { get; set; }
+        private GeneratorParamsModel CurrentParams { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            CurrentParams = new GeneratorParams();
+            CurrentParams = new GeneratorParamsModel();
             DataContext = CurrentParams;
         }
 
@@ -35,6 +35,7 @@ namespace GpgKeyGen
         {
             if (CurrentParams.IsValid())
             {
+                GpgBatchGenerator.GenerateKey(CurrentParams.ToGpgKeygenParams());
                 string path = FilenameUtils.GetTempFilePathWithExtension(".txt");
                 File.WriteAllText(path, GpgBatchGenerator.GetScript(CurrentParams.ToGpgKeygenParams()));
 
