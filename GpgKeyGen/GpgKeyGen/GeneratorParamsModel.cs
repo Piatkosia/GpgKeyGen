@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using CmdWrapper;
 using FileSystemUtils;
 using GeneralUtils;
 using GpgKeyGenWrapper;
@@ -71,6 +74,14 @@ namespace GpgKeyGen
             }
         }
 
+        private string _cmdOutputString;
+
+        public string CmdOutputString
+        {
+            get { return _cmdOutputString; }
+            set { _cmdOutputString = value; }
+        }
+
 
         public string ErrorLog { get; set; }
         public DelegateCommand GenerateCommand { get; private set; }
@@ -82,13 +93,32 @@ namespace GpgKeyGen
 
         private bool CanGenerate()
         {
-            return IsValid();
+            return IsValid() && !generatingInProgress;
         }
 
+        private bool generatingInProgress = false;
         private void Generate()
         {
+            generatingInProgress = true;
+            CmdOutputString = String.Empty;
             string path = FilenameUtils.GetTempFilePathWithExtension(".txt");
             File.WriteAllText(path, GpgBatchGenerator.GetScript(ToGpgKeygenParams()));
+            Wrapper cmdWrapper = new Wrapper();
+            cmdWrapper.Exited += CmdWrapper_Exited;
+            cmdWrapper.OnIncommingText += CmdWrapper_OnIncommingText;
+            Task.Run(()=>
+                cmdWrapper.RunCmdProcess("gpg", " --batch --gen-key " + path,
+                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop))); //TODO: add async, add configurable path; sending key to keyserver, replace lib
+        }
+
+        private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)
+        {
+            CmdOutputString += e.IncommingText + System.Environment.NewLine;
+        }
+
+        private void CmdWrapper_Exited(object sender, EventArgs e)
+        {
+            generatingInProgress = false;
         }
 
         public GpgKeygenParams ToGpgKeygenParams()

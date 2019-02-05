@@ -17,7 +17,7 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    
+
     <Grid>
 
         <Grid.RowDefinitions>
@@ -26,7 +26,9 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition Height="5*" />
             <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -46,7 +48,7 @@
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
-        <PasswordBox x:Name="KeyPwd" Margin="5" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PasswordChanged="PasswordChanged"/> 
+        <PasswordBox x:Name="KeyPwd" Margin="5" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PasswordChanged="PasswordChanged"/>
         <TextBox x:Name="Comment" Margin="5" Grid.Row="2" Grid.Column="1"  TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Binding Path="Comment" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True" ValidatesOnDataErrors="True" ValidatesOnNotifyDataErrors="True">
                 <Binding.ValidationRules>
@@ -54,13 +56,16 @@
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
-        <Button Content="Generuj klucze"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="1" Command="{Binding GenerateCommand}"  Margin="10"/>
+        <Button Content="Generuj klucze"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="1" Command="{Binding GenerateCommand}"  Margin="10"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Imię i nazwisko: " TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Adres e-mail:" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Komentarz:" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="hasło klucza:" TextAlignment="Center"/>
         <CheckBox x:Name="ForCommission" Content="Tylko na 1 dzień (komisja)" Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" IsChecked="{Binding Path=ForCommission}" />
-        <Button Content="Ustawienia"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="0" Margin="10" Click="ChangeSettings"/>
+        <ScrollViewer Margin="5" Grid.Row="5"  Grid.ColumnSpan="2">
+            <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding CmdOutputString}" TextAlignment="Center"/>
+        </ScrollViewer>
+        <Button Content="Ustawienia"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="0" Margin="10" Click="ChangeSettings"/>
 
 
     </Grid>
