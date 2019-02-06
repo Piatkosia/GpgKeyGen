@@ -79,7 +79,10 @@ namespace GpgKeyGen
         public string CmdOutputString
         {
             get { return _cmdOutputString; }
-            set { _cmdOutputString = value; }
+            set
+            {
+                SetProperty(ref _cmdOutputString, value);
+            }
         }
 
 
@@ -88,7 +91,7 @@ namespace GpgKeyGen
 
         public GeneratorParamsModel()
         {
-                GenerateCommand = new DelegateCommand(Generate, CanGenerate);
+                GenerateCommand = new DelegateCommand(async()=> { await Generate(); }, CanGenerate);
         }
 
         private bool CanGenerate()
@@ -97,7 +100,7 @@ namespace GpgKeyGen
         }
 
         private bool generatingInProgress = false;
-        private void Generate()
+        private async Task Generate()
         {
             generatingInProgress = true;
             CmdOutputString = String.Empty;
@@ -106,14 +109,14 @@ namespace GpgKeyGen
             Wrapper cmdWrapper = new Wrapper();
             cmdWrapper.Exited += CmdWrapper_Exited;
             cmdWrapper.OnIncommingText += CmdWrapper_OnIncommingText;
-            Task.Run(()=>
-                cmdWrapper.RunCmdProcess("gpg", " --batch --gen-key " + path,
-                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop))); //TODO: add async, add configurable path; sending key to keyserver, replace lib
+            await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", " --batch --gen-key -v " + path,
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),true));
+             //TODO: add async, add configurable path; sending key to keyserver, replace lib
         }
 
         private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)
         {
-            CmdOutputString += e.IncommingText + System.Environment.NewLine;
+            CmdOutputString += TextUtils.ConsoleToWPF(e.IncommingText) + System.Environment.NewLine;
         }
 
         private void CmdWrapper_Exited(object sender, EventArgs e)

@@ -31,19 +31,6 @@ namespace GpgKeyGen
             DataContext = CurrentParams;
         }
 
-        private void Generate(object sender, RoutedEventArgs e)
-        {
-            if (CurrentParams.IsValid())
-            {
-                GpgBatchGenerator.GenerateKey(CurrentParams.ToGpgKeygenParams());
-                string path = FilenameUtils.GetTempFilePathWithExtension(".txt");
-                File.WriteAllText(path, GpgBatchGenerator.GetScript(CurrentParams.ToGpgKeygenParams()));
-
-
-            }
-            else MessageBox.Show("Znaleziono następujące błędy:" + System.Environment.NewLine + CurrentParams.ErrorLog);
-        }
-
         private void ChangeSettings(object sender, RoutedEventArgs e)
         {
 
