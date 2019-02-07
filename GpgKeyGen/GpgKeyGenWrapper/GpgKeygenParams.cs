@@ -8,14 +8,18 @@ namespace GpgKeyGenWrapper
 {
     public class GpgKeygenParams
     {
+        public static readonly string DefaultKeyType = "RSA";
+        public static readonly uint DefaultKeyLength = 2048;
+        public static readonly string DefaultPublicKeyFilename = "pubkey.pub";
+        public static readonly string DefaultPrivateKeyFilename = "privkey.sec";
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
         public string Comment { get; set; }
         public int ExpiredInDays { get; set; } //0 if never
-        public string KeyType { get; set; } = "RSA"; //we can change in the future
-        public uint KeyLength { get; set; } = 2048;
-        public string PublicKeyPath { get; set; } = "pubkey.pub";
-        public string PrivateKeyPath { get; set; } = "privkey.sec";
+        public string KeyType { get; set; } = DefaultKeyType;
+        public uint KeyLength { get; set; } = DefaultKeyLength;
+        public string PublicKeyPath { get; set; } = DefaultPublicKeyFilename;
+        public string PrivateKeyPath { get; set; } = DefaultPrivateKeyFilename;
     }
 }

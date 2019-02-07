@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Microsoft.SqlServer.Server;
 
 namespace GeneralUtils
 {
@@ -13,7 +9,7 @@ namespace GeneralUtils
         {
             if (string.IsNullOrWhiteSpace(stringToRecode)) return  String.Empty;
             var inputEncoding = System.Text.Encoding.GetEncoding(852);//852; "ISO-8859-2" , 1250
-            Encoding outputEncoding = System.Text.Encoding.UTF8;
+            Encoding outputEncoding = System.Text.Encoding.Default;
             byte[] inputBytes = inputEncoding.GetBytes(stringToRecode);
             byte[] outputBytes = Encoding.Convert(inputEncoding, outputEncoding, inputBytes);
             return outputEncoding.GetString(outputBytes);
