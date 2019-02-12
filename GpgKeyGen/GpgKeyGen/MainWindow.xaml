@@ -6,18 +6,6 @@
         mc:Ignorable="d"
         xmlns:validators ="clr-namespace:GpgKeyGen.Validators"
         Title="Generator kluczy" SizeToContent="WidthAndHeight" MinHeight="300" MinWidth="400">
-    <Window.Resources>
-        <validators:FieldRequired x:Key="FieldRequired"/>
-        <validators:EmailCorrect x:Key="EmailCorrect"/>
-        <Style TargetType="TextBox">
-            <Style.Triggers>
-                <Trigger Property="Validation.HasError" Value="true">
-                    <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors).CurrentItem.ErrorContent}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
-
     <Grid>
 
         <Grid.RowDefinitions>

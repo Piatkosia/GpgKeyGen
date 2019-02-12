@@ -33,7 +33,8 @@ namespace GpgKeyGen
 
         private void ChangeSettings(object sender, RoutedEventArgs e)
         {
-
+            UserSettingsWindow window = new UserSettingsWindow();
+            window.ShowDialog();
         }
 
         private void PasswordChanged(object sender, RoutedEventArgs e)

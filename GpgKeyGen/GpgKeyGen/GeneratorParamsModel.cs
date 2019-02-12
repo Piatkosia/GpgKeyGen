@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
 using CmdWrapper;
 using FileSystemUtils;
 using GeneralUtils;
@@ -113,14 +109,14 @@ namespace GpgKeyGen
             cmdWrapper.OnIncommingText += CmdWrapper_OnIncommingText;
             CmdOutputString += "Tworzenie klucza: " + System.Environment.NewLine;
             await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", " --batch --gen-key -v " + path,
-                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),Encoding.GetEncoding(852)));
+                Properties.Settings.Default.LocalKeyPath,Encoding.GetEncoding(852)));
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
                     .Split(' ')[5].Remove(0, 2);
             CmdOutputString += "Import klucza do bazy lokalnej: " + System.Environment.NewLine;
             await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", $"--import {GpgKeygenParams.DefaultPublicKeyFilename}  {GpgKeygenParams.DefaultPrivateKeyFilename}",
                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Encoding.GetEncoding(852)));
-            //TODO: add async, add configurable path; sending key to keyserver, replace lib
+            //TODO: sending key to keyserver, set sizes
         }
 
         private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)

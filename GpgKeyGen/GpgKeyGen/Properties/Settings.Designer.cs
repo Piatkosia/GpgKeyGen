@@ -37,7 +37,7 @@ namespace GpgKeyGen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.56.101")]
         public string KeyServer {
             get {
                 return ((string)(this["KeyServer"]));
