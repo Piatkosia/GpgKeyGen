@@ -6,7 +6,7 @@
         xmlns:validators ="clr-namespace:GpgKeyGen.Validators"
         xmlns:local="clr-namespace:GpgKeyGen"
         mc:Ignorable="d"
-        Title="Ustawienia programu" Height="184" Width="558">
+        Title="Ustawienia programu" Height="184" Width="558" ResizeMode="CanMinimize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

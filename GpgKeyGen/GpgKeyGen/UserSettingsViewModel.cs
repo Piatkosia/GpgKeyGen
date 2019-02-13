@@ -60,6 +60,7 @@ namespace GpgKeyGen
         {
             Properties.Settings.Default.LocalKeyPath = Path;
             Properties.Settings.Default.KeyServer = Address;
+            Properties.Settings.Default.Save();
             CloseView();
         }
     }

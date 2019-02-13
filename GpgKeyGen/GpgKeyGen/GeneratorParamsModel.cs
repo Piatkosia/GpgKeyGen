@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using CmdWrapper;
 using FileSystemUtils;
 using GeneralUtils;
@@ -86,10 +87,11 @@ namespace GpgKeyGen
 
         public string ErrorLog { get; set; }
         public DelegateCommand GenerateCommand { get; private set; }
-
         public GeneratorParamsModel()
         {
                 GenerateCommand = new DelegateCommand(async()=> { await Generate(); }, CanGenerate);
+                if (string.IsNullOrWhiteSpace(Properties.Settings.Default.LocalKeyPath) ||!Directory.Exists(Properties.Settings.Default.LocalKeyPath)) Properties.Settings.Default.LocalKeyPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                Properties.Settings.Default.Save();
         }
 
         private bool CanGenerate()
@@ -112,11 +114,20 @@ namespace GpgKeyGen
                 Properties.Settings.Default.LocalKeyPath,Encoding.GetEncoding(852)));
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
-                    .Split(' ')[5].Remove(0, 2);
+                    .Split(' ')[5].Remove(0, 2).Trim();
             CmdOutputString += "Import klucza do bazy lokalnej: " + System.Environment.NewLine;
             await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", $"--import {GpgKeygenParams.DefaultPublicKeyFilename}  {GpgKeygenParams.DefaultPrivateKeyFilename}",
-                Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Encoding.GetEncoding(852)));
-            //TODO: sending key to keyserver, set sizes
+                Properties.Settings.Default.LocalKeyPath, Encoding.GetEncoding(852)));
+           
+
+            if (MessageBox.Show("Czy wysłać nowo wygenerowany klucz publiczny na serwer?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                CmdOutputString += "Wysyłanie klucza na serwer: " + System.Environment.NewLine;
+                await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}",
+                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Encoding.GetEncoding(852)));
+            }
+
+            //TODO: set sizes
         }
 
         private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)
