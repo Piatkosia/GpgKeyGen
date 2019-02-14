@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT3H15M14.882348S" SolutionTotalViewTime="PT6H26M57.4069459S" SolutionTotalDebugTime="PT24M54.4100982S">
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT3H24M37.8538214S" SolutionTotalViewTime="PT7H7M44.0571762S" SolutionTotalDebugTime="PT28M56.9248202S">
   <FileVersion>
     <Major>1</Major>
     <Minor>0</Minor>
@@ -7,206 +7,118 @@
   <SolutionFolder>E:\MGR_repa\GpgKeyGen\GpgKeyGen</SolutionFolder>
   <SessionTimeList />
   <LastSessionTimeList>
-    <DevTrackerDataItem ViewActiveTime="PT21.9044936S" EditActiveTime="PT1.6940331S">
-      <ModifiedDate>2019-02-12T22:41:38.7841775+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\App.xaml</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T22:41:31.5313196+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT2M22.7249342S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT4M2.514722S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>Debug Mode</Item>
       <ItemType>DebugModeItem</ItemType>
       <ProjectName />
-      <CreatedDate>2019-02-12T13:06:17.9412322+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:09:07.258078+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT10.7791533S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT11.4885672S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\Validators\EmailCorrect.cs</Item>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FilenameUtils.cs</Item>
       <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T19:07:32.2433353+01:00</CreatedDate>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FileSystemUtils.csproj</ProjectName>
+      <CreatedDate>2019-02-13T21:27:01.6638262+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT29.6144371S" EditActiveTime="PT22.0489712S">
-      <ModifiedDate>2019-02-12T13:54:37.3091502+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\FolderBrowserDialog.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\WpfControlUtils.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:53:00.7120883+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT18.8332441S" EditActiveTime="PT4.2363432S">
-      <ModifiedDate>2019-02-12T13:51:13.4330501+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\FolderPath.xaml</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\WpfControlUtils.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:50:30.9907017+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT31.5569143S" EditActiveTime="PT39.745171S">
-      <ModifiedDate>2019-02-12T13:53:44.034758+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\FolderPath.xaml.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\WpfControlUtils.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:51:18.791077+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT9M53.9940644S" EditActiveTime="PT31.2145532S">
-      <ModifiedDate>2019-02-12T22:45:09.9365958+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT30M24.2505835S" EditActiveTime="PT9M8.8825517S">
+      <ModifiedDate>2019-02-13T20:47:44.2118137+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GeneratorParamsModel.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:00:10.6205864+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T18:18:21.135432+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT5M52.4746796S" EditActiveTime="PT13.8321017S">
-      <ModifiedDate>2019-02-12T22:43:09.9551129+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT16.9426142S" EditActiveTime="PT4.9140178S">
+      <ModifiedDate>2019-02-13T20:49:57.3164193+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:05:19.9895229+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:06:59.8270262+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT7M4.2055789S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT4M41.0544077S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\MainWindow.xaml</Item>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml</Item>
       <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\WpfControlUtils.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:42:56.1958102+01:00</CreatedDate>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.4170595+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4M50.0808589S" EditActiveTime="PT27.0660913S">
-      <ModifiedDate>2019-02-12T21:52:49.560306+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
+    <DevTrackerDataItem ViewActiveTime="PT2.0241038S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:07:09.7689871+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:50:08.151326+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT0S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT0.3446861S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
-      <ViewedCount>0</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\MainWindow.xaml.cs</Item>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml.cs</Item>
       <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\WpfControlUtils\WpfControlUtils.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:42:55.6362823+01:00</CreatedDate>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.0214044+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4M40.04135S" EditActiveTime="PT6M35.0108554S">
-      <ModifiedDate>2019-02-12T22:33:44.4620474+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
+    <DevTrackerDataItem ViewActiveTime="PT6.0211937S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\Validators\NetAddressCorrect.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T19:07:30.0355173+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:50:10.1774038+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT21.2058921S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>OpenDialogView.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName />
-      <CreatedDate>2019-02-12T15:16:08.9314106+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3.6954344S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GeneralUtils.Tests\packages.config</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GeneralUtils.Tests\GeneralUtils.Tests.csproj</ProjectName>
-      <CreatedDate>2019-02-12T20:43:24.0642138+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT40.0103835S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\packages.config</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T20:53:29.9179674+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M36.5525467S" EditActiveTime="PT2.1488906S">
-      <ModifiedDate>2019-02-12T21:56:25.5177542+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\Properties\Settings.settings</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:24:38.7012976+01:00</CreatedDate>
-      <ViewedBy>piatk</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT9M22.6033855S" EditActiveTime="PT9M59.2898329S">
-      <ModifiedDate>2019-02-12T22:34:25.3946725+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT11.7536456S" EditActiveTime="PT2.3833144S">
+      <ModifiedDate>2019-02-13T20:28:59.9195658+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsViewModel.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T15:38:29.1018036+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:28:53.8534251+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT37M29.2077042S" EditActiveTime="PT19M37.9937933S">
-      <ModifiedDate>2019-02-12T22:39:08.9777272+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT4M45.5813527S" EditActiveTime="PT6.7791074S">
+      <ModifiedDate>2019-02-13T20:50:35.9944778+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T13:09:11.1127468+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:07:00.9425698+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT12M26.6059908S" EditActiveTime="PT4M7.0762169S">
-      <ModifiedDate>2019-02-12T22:15:05.7654621+01:00</ModifiedDate>
-      <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
+    <DevTrackerDataItem ViewActiveTime="PT7.215576S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
-      <CreatedDate>2019-02-12T15:28:40.8889934+01:00</CreatedDate>
+      <CreatedDate>2019-02-13T20:28:47.7918845+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
   </LastSessionTimeList>
@@ -243,10 +155,10 @@
       <CreatedDate>2019-02-05T20:32:07.5688394+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT24M54.4100982S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT28M56.9248202S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
-      <ViewedCount>7</ViewedCount>
+      <ViewedCount>8</ViewedCount>
       <Item>Debug Mode</Item>
       <ItemType>DebugModeItem</ItemType>
       <ProjectName />
@@ -307,11 +219,11 @@
       <CreatedDate>2019-01-25T16:58:10.8276794+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M45.3440322S" EditActiveTime="PT3M17.7619868S">
+    <DevTrackerDataItem ViewActiveTime="PT1M56.8196077S" EditActiveTime="PT3M17.7619868S">
       <ModifiedDate>2019-01-27T14:44:08.6513053+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>2</EditedCount>
-      <ViewedCount>4</ViewedCount>
+      <ViewedCount>5</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FilenameUtils.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FileSystemUtils.csproj</ProjectName>
@@ -351,11 +263,11 @@
       <CreatedDate>2019-02-12T13:51:18.791077+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1H45M4.8936764S" EditActiveTime="PT55M2.3693329S">
-      <ModifiedDate>2019-02-12T22:45:09.9365958+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT2H15M29.1442599S" EditActiveTime="PT1H4M11.2518846S">
+      <ModifiedDate>2019-02-13T20:47:44.2118137+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>10</EditedCount>
-      <ViewedCount>11</ViewedCount>
+      <EditedCount>11</EditedCount>
+      <ViewedCount>12</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GeneratorParamsModel.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
@@ -415,11 +327,11 @@
       <CreatedDate>2019-02-06T20:25:10.3221797+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT58M28.6245948S" EditActiveTime="PT36M38.5256877S">
-      <ModifiedDate>2019-02-12T22:43:09.9551129+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT58M45.567209S" EditActiveTime="PT36M43.4397055S">
+      <ModifiedDate>2019-02-13T20:49:57.3164193+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>7</EditedCount>
-      <ViewedCount>11</ViewedCount>
+      <EditedCount>8</EditedCount>
+      <ViewedCount>12</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
@@ -446,11 +358,21 @@
       <CreatedDate>2019-02-12T13:42:56.1958102+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT50M43.8307031S" EditActiveTime="PT14M1.657119S">
+    <DevTrackerDataItem ViewActiveTime="PT4M41.0544077S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.4170595+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT50M45.8548069S" EditActiveTime="PT14M1.657119S">
       <ModifiedDate>2019-02-12T21:52:49.560306+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>8</EditedCount>
-      <ViewedCount>13</ViewedCount>
+      <ViewedCount>14</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
@@ -477,11 +399,21 @@
       <CreatedDate>2019-02-12T13:42:55.6362823+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4M40.04135S" EditActiveTime="PT6M35.0108554S">
+    <DevTrackerDataItem ViewActiveTime="PT0.3446861S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.0214044+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M46.0625437S" EditActiveTime="PT6M35.0108554S">
       <ModifiedDate>2019-02-12T22:33:44.4620474+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
+      <ViewedCount>2</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\Validators\NetAddressCorrect.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
@@ -580,33 +512,33 @@
       <CreatedDate>2019-02-06T21:46:48.5590999+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT9M22.6033855S" EditActiveTime="PT9M59.2898329S">
-      <ModifiedDate>2019-02-12T22:34:25.3946725+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT9M34.3570311S" EditActiveTime="PT10M1.6731473S">
+      <ModifiedDate>2019-02-13T20:28:59.9195658+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>2</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsViewModel.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
       <CreatedDate>2019-02-12T15:38:29.1018036+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT37M29.2077042S" EditActiveTime="PT19M37.9937933S">
-      <ModifiedDate>2019-02-12T22:39:08.9777272+01:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT42M14.7890569S" EditActiveTime="PT19M44.7729007S">
+      <ModifiedDate>2019-02-13T20:50:35.9944778+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>2</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
       <CreatedDate>2019-02-12T13:09:11.1127468+01:00</CreatedDate>
       <ViewedBy>piatk</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT12M26.6059908S" EditActiveTime="PT4M7.0762169S">
+    <DevTrackerDataItem ViewActiveTime="PT12M33.8215668S" EditActiveTime="PT4M7.0762169S">
       <ModifiedDate>2019-02-12T22:15:05.7654621+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>
       <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
+      <ViewedCount>2</ViewedCount>
       <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
@@ -626,6 +558,120 @@
     </DevTrackerDataItem>
   </TotalTimeList>
   <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT11.4795726S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FilenameUtils.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\FileSystemUtils\FileSystemUtils.csproj</ProjectName>
+      <CreatedDate>2019-02-13T21:27:01.6638262+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M41.0544077S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.4170595+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT0.3446861S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\DocumentService\DocumentService.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:56:28.0214044+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6.0211937S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\Validators\NetAddressCorrect.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:50:10.1774038+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2.0241038S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:50:08.151326+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT11.7536456S" EditActiveTime="PT2.3833144S">
+      <ModifiedDate>2019-02-13T20:28:59.9195658+01:00</ModifiedDate>
+      <ModifiedBy>piatk</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsViewModel.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:28:53.8534251+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT7.215576S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:28:47.7918845+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M2.514722S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2019-02-13T20:09:07.258078+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M45.5813527S" EditActiveTime="PT6.7791074S">
+      <ModifiedDate>2019-02-13T20:50:35.9944778+01:00</ModifiedDate>
+      <ModifiedBy>piatk</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\UserSettingsWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:07:00.9425698+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT16.9426142S" EditActiveTime="PT4.9140178S">
+      <ModifiedDate>2019-02-13T20:49:57.3164193+01:00</ModifiedDate>
+      <ModifiedBy>piatk</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T20:06:59.8270262+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT30M24.2505835S" EditActiveTime="PT9M8.8825517S">
+      <ModifiedDate>2019-02-13T20:47:44.2118137+01:00</ModifiedDate>
+      <ModifiedBy>piatk</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GeneratorParamsModel.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>E:\MGR_repa\GpgKeyGen\GpgKeyGen\GpgKeyGen\GpgKeyGen.UI.csproj</ProjectName>
+      <CreatedDate>2019-02-13T18:18:21.135432+01:00</CreatedDate>
+      <ViewedBy>piatk</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT21.9044936S" EditActiveTime="PT1.6940331S">
       <ModifiedDate>2019-02-12T22:41:38.7841775+01:00</ModifiedDate>
       <ModifiedBy>piatk</ModifiedBy>

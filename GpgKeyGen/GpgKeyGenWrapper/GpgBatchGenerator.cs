@@ -25,7 +25,7 @@ namespace GpgKeyGenWrapper
 
         }
 
-        public static void GenerateKey(GpgKeygenParams gpgKeygenParams)
+        public static string GenerateKey(GpgKeygenParams gpgKeygenParams)
         {
             throw new NotImplementedException();
         }

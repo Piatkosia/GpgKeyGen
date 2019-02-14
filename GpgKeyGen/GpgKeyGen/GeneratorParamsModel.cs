@@ -110,24 +110,28 @@ namespace GpgKeyGen
             cmdWrapper.Exited += CmdWrapper_Exited;
             cmdWrapper.OnIncommingText += CmdWrapper_OnIncommingText;
             CmdOutputString += "Tworzenie klucza: " + System.Environment.NewLine;
-            await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", " --batch --gen-key -v " + path,
-                Properties.Settings.Default.LocalKeyPath,Encoding.GetEncoding(852)));
+            await RunGpgCommand(cmdWrapper, " --batch --gen-key -v " + path);
+           
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
                     .Split(' ')[5].Remove(0, 2).Trim();
             CmdOutputString += "Import klucza do bazy lokalnej: " + System.Environment.NewLine;
-            await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", $"--import {GpgKeygenParams.DefaultPublicKeyFilename}  {GpgKeygenParams.DefaultPrivateKeyFilename}",
-                Properties.Settings.Default.LocalKeyPath, Encoding.GetEncoding(852)));
+            await RunGpgCommand(cmdWrapper,
+                $"--import {GpgKeygenParams.DefaultPublicKeyFilename} {GpgKeygenParams.DefaultPrivateKeyFilename}");
            
 
             if (MessageBox.Show("Czy wysłać nowo wygenerowany klucz publiczny na serwer?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
-                CmdOutputString += "Wysyłanie klucza na serwer: " + System.Environment.NewLine;
-                await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}",
-                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop), Encoding.GetEncoding(852)));
+                await RunGpgCommand(cmdWrapper,
+                    " --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");     
             }
 
-            //TODO: set sizes
+        }
+
+        private async Task RunGpgCommand(Wrapper cmdWrapper, string command)
+        {
+            await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg",command,
+                Properties.Settings.Default.LocalKeyPath, Encoding.GetEncoding(852)));
         }
 
         private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)
