@@ -138,6 +138,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DocumentGenerator\DocumentGenerator.csproj">
+      <Project>{4a0685a2-8b92-4cf7-b6c8-0a89ea749916}</Project>
+      <Name>DocumentGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FileSystemUtils\FileSystemUtils.csproj">
       <Project>{b5802d9d-adb6-4c86-a537-c1e395a38256}</Project>
       <Name>FileSystemUtils</Name>

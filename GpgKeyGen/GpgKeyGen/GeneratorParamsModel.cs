@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using CmdWrapper;
+using DocumentGenerator;
 using FileSystemUtils;
 using GeneralUtils;
 using GpgKeyGenWrapper;
@@ -87,6 +88,8 @@ namespace GpgKeyGen
 
         public string ErrorLog { get; set; }
         public DelegateCommand GenerateCommand { get; private set; }
+        public bool ProcessFailed { get; private set; }
+
         public GeneratorParamsModel()
         {
                 GenerateCommand = new DelegateCommand(async()=> { await Generate(); }, CanGenerate);
@@ -102,15 +105,23 @@ namespace GpgKeyGen
         private bool generatingInProgress = false;
         private async Task Generate()
         {
+            ProcessFailed = false;
             generatingInProgress = true;
             CmdOutputString = String.Empty;
             string path = FilenameUtils.GetTempFilePathWithExtension(".txt");
             File.WriteAllText(path, GpgBatchGenerator.GetScript(ToGpgKeygenParams()));
             Wrapper cmdWrapper = new Wrapper();
             cmdWrapper.Exited += CmdWrapper_Exited;
+            cmdWrapper.Failed += CmdWrapper_Failed;
             cmdWrapper.OnIncommingText += CmdWrapper_OnIncommingText;
             CmdOutputString += "Tworzenie klucza: " + System.Environment.NewLine;
             await RunGpgCommand(cmdWrapper, " --batch --gen-key -v " + path);
+            if (ProcessFailed)
+            {
+                CmdOutputString =
+                    "Wygenerowanie niemożliwe - proszę zainstalować pakiet GPG. \n https://www.gpg4win.org/thanks-for-download.html";
+                return;
+            }
            
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
@@ -123,15 +134,25 @@ namespace GpgKeyGen
             if (MessageBox.Show("Czy wysłać nowo wygenerowany klucz publiczny na serwer?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 await RunGpgCommand(cmdWrapper,
-                    " --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");     
+                    $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");     
+            }
+            if (MessageBox.Show("Czy przygotować dokument dla nowo wygenerowanego klucza?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                KeyIntroduceGenerator generator = new KeyIntroduceGenerator();
+                generator.GenerateDocument("", keyId, Username);
             }
 
         }
 
+        private void CmdWrapper_Failed(object sender, IncommingTextEventArgs e)
+        {
+            ProcessFailed = true;
+        }
+
         private async Task RunGpgCommand(Wrapper cmdWrapper, string command)
         {
-            await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg",command,
-                Properties.Settings.Default.LocalKeyPath, Encoding.GetEncoding(852)));
+                await Task.Run(async () => await cmdWrapper.RunCmdProcess("gpg", command,
+                    Properties.Settings.Default.LocalKeyPath, Encoding.GetEncoding(852)));
         }
 
         private void CmdWrapper_OnIncommingText(object sender, IncommingTextEventArgs e)
