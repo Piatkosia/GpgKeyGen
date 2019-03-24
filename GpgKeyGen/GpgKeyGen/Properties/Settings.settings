@@ -8,5 +8,8 @@
     <Setting Name="KeyServer" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.56.101</Value>
     </Setting>
+    <Setting Name="DocumentOutputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

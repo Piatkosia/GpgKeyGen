@@ -46,5 +46,17 @@ namespace GpgKeyGen.Properties {
                 this["KeyServer"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DocumentOutputPath {
+            get {
+                return ((string)(this["DocumentOutputPath"]));
+            }
+            set {
+                this["DocumentOutputPath"] = value;
+            }
+        }
     }
 }

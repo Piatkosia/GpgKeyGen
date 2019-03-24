@@ -94,7 +94,8 @@ namespace GpgKeyGen
         {
                 GenerateCommand = new DelegateCommand(async()=> { await Generate(); }, CanGenerate);
                 if (string.IsNullOrWhiteSpace(Properties.Settings.Default.LocalKeyPath) ||!Directory.Exists(Properties.Settings.Default.LocalKeyPath)) Properties.Settings.Default.LocalKeyPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                Properties.Settings.Default.Save();
+                if (string.IsNullOrWhiteSpace(Properties.Settings.Default.DocumentOutputPath) || !Directory.Exists(Properties.Settings.Default.DocumentOutputPath)) Properties.Settings.Default.DocumentOutputPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            Properties.Settings.Default.Save();
         }
 
         private bool CanGenerate()
@@ -139,7 +140,7 @@ namespace GpgKeyGen
             if (MessageBox.Show("Czy przygotować dokument dla nowo wygenerowanego klucza?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 KeyIntroduceGenerator generator = new KeyIntroduceGenerator();
-                generator.GenerateDocument("", keyId, Username);
+                generator.GenerateDocument(Properties.Settings.Default.DocumentOutputPath, keyId, Username);
             }
 
         }
