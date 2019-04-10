@@ -10,8 +10,8 @@ namespace GpgKeyGenWrapper
     {
         public static readonly string DefaultKeyType = "RSA";
         public static readonly uint DefaultKeyLength = 2048;
-        public static readonly string DefaultPublicKeyFilename = "pubkey.pub";
-        public static readonly string DefaultPrivateKeyFilename = "privkey.sec";
+        public static readonly string DefaultPublicKeyFilename = "pubkey.gpg";
+        public static readonly string DefaultPrivateKeyFilename = "privkey.gpg";
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }

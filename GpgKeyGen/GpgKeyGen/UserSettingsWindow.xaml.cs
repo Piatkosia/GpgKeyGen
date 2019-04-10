@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace GpgKeyGen
@@ -22,10 +23,18 @@ namespace GpgKeyGen
 
         private void GetPath(object sender, RoutedEventArgs e)
         {
+            string path;
+            if (GetFilePath("Gdzie zapisać klucze? ", out path))
+            {
+                model.Path = path;
+            }
+        }
+
+        private bool GetFilePath(string title, out string path)
+        {
             using (var dlg = new CommonOpenFileDialog())
             {
-
-                dlg.Title = "Gdzie zapisać klucze? ";
+                dlg.Title = title;
                 dlg.IsFolderPicker = true;
                 dlg.InitialDirectory = model.Path;
 
@@ -41,15 +50,28 @@ namespace GpgKeyGen
 
                 if (dlg.ShowDialog() == CommonFileDialogResult.Ok)
                 {
-                    model.Path = dlg.FileName;
+                   path = dlg.FileName;
+                   return true;
                 }
             }
+
+            path = "";
+            return false;
         }
 
         private void SavePath(object sender, RoutedEventArgs e)
         {
             model.SaveSettings();
             DialogResult = true;
+        }
+
+        private void GetDocumentPath(object sender, RoutedEventArgs e)
+        {
+            string path;
+            if (GetFilePath("Gdzie zapisać dokumenty? ", out path))
+            {
+                model.DocumentPath = path;
+            }
         }
     }
 }

@@ -33,6 +33,14 @@ namespace GpgKeyGen
                 SaveCommand.RaiseCanExecuteChanged();
             }
         }
+        private string _documentPath;
+
+        public string DocumentPath
+        {
+            get { return _documentPath; }
+            set { SetProperty(ref _documentPath, value); }
+        }
+
         public DelegateCommand SaveCommand { get; private set; }
         public Action CloseView { get; set; }
 
@@ -55,11 +63,16 @@ namespace GpgKeyGen
                 Properties.Settings.Default.LocalKeyPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             Path = Properties.Settings.Default.LocalKeyPath;
             Address = Properties.Settings.Default.KeyServer;
+            DocumentPath = Properties.Settings.Default.DocumentOutputPath;
         }
+
+       
+
         internal void SaveSettings()
         {
             Properties.Settings.Default.LocalKeyPath = Path;
             Properties.Settings.Default.KeyServer = Address;
+            Properties.Settings.Default.DocumentOutputPath = DocumentPath;
             Properties.Settings.Default.Save();
             CloseView();
         }

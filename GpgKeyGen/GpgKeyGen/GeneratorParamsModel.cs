@@ -123,19 +123,19 @@ namespace GpgKeyGen
                     "Wygenerowanie niemożliwe - proszę zainstalować pakiet GPG. \n https://www.gpg4win.org/thanks-for-download.html";
                 return;
             }
-           
+
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
                     .Split(' ')[5].Remove(0, 2).Trim();
             CmdOutputString += "Import klucza do bazy lokalnej: " + System.Environment.NewLine;
             await RunGpgCommand(cmdWrapper,
                 $"--import {GpgKeygenParams.DefaultPublicKeyFilename} {GpgKeygenParams.DefaultPrivateKeyFilename}");
-           
+
 
             if (MessageBox.Show("Czy wysłać nowo wygenerowany klucz publiczny na serwer?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 await RunGpgCommand(cmdWrapper,
-                    $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");     
+                    $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");
             }
             if (MessageBox.Show("Czy przygotować dokument dla nowo wygenerowanego klucza?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
