@@ -120,7 +120,7 @@ namespace GpgKeyGen
             if (ProcessFailed)
             {
                 CmdOutputString =
-                    "Wygenerowanie niemożliwe - proszę zainstalować pakiet GPG. \n https://www.gpg4win.org/thanks-for-download.html";
+                    "Wygenerowanie niemożliwe. Proszę zainstalować pakieg GPG";
                 return;
             }
 
