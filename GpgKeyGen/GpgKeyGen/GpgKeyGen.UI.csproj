@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="Validators\EmailCorrect.cs" />
     <Compile Include="Validators\FieldRequired.cs" />
+    <Compile Include="Validators\NameCorrect.cs" />
     <Compile Include="Validators\NetAddressCorrect.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

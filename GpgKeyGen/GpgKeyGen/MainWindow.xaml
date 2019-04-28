@@ -25,7 +25,7 @@
         <TextBox  x:Name="Username" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Binding Path="Username" UpdateSourceTrigger="PropertyChanged" ValidatesOnExceptions="True" ValidatesOnDataErrors="True" ValidatesOnNotifyDataErrors="True">
                 <Binding.ValidationRules>
-                    <validators:FieldRequired/>
+                    <validators:NameCorrect/>
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
