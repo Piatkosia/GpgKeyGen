@@ -156,5 +156,9 @@
       <Name>GpgKeyGenWrapper</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\credits.txt" />
+    <Resource Include="Icons\key.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
