@@ -45,7 +45,7 @@
             </Binding>
         </TextBox>
         <Button Content="Generuj klucze"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="6" Grid.Column="1" Command="{Binding GenerateCommand}"  Margin="5"/>
-        <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="Imię i nazwisko: " TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="{Binding NameString}" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Adres e-mail:" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Komentarz:" TextAlignment="Center"/>
         <TextBlock HorizontalAlignment="Right" Margin="5" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="hasło klucza:" TextAlignment="Center"/>

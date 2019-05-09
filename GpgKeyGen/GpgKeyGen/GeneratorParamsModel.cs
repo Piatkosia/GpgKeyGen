@@ -61,6 +61,15 @@ namespace GpgKeyGen
                 GenerateCommand.RaiseCanExecuteChanged();
             }
         }
+        public string NameString
+        {
+            get
+            {
+                if (OneDay) return "Nazwa głosowania:";
+                else return "Imię i nazwisko:";
+            }
+           
+        }
 
         private bool _oneDay;
 
@@ -71,6 +80,7 @@ namespace GpgKeyGen
             {
                 SetProperty(ref _oneDay, value);
                 GenerateCommand.RaiseCanExecuteChanged();
+                OnPropertyChanged(nameof(NameString));
             }
         }
 
