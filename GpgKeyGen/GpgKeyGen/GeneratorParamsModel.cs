@@ -137,6 +137,7 @@ namespace GpgKeyGen
             string keyId =
                 CmdOutputString.Split(Environment.NewLine.ToCharArray()).Last(w => String.IsNullOrEmpty(w) == false)
                     .Split(' ')[5].Remove(0, 2).Trim();
+            File.Delete(path);
             CmdOutputString += "Import klucza do bazy lokalnej: " + System.Environment.NewLine;
             await RunGpgCommand(cmdWrapper,
                 $"--import {GpgKeygenParams.DefaultPublicKeyFilename} {GpgKeygenParams.DefaultPrivateKeyFilename}");
