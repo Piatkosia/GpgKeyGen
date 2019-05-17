@@ -99,6 +99,7 @@ namespace GpgKeyGen
         public string ErrorLog { get; set; }
         public DelegateCommand GenerateCommand { get; private set; }
         public bool ProcessFailed { get; private set; }
+        public Action ClearPasswordFunction { get; set; }
 
         public GeneratorParamsModel()
         {
@@ -154,6 +155,17 @@ namespace GpgKeyGen
                 generator.GenerateDocument(Properties.Settings.Default.DocumentOutputPath, keyId, Username);
             }
 
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            Username = string.Empty;
+            Comment = string.Empty;
+            Email = string.Empty;
+            Password = string.Empty;
+            OneDay = false;
+            ClearPasswordFunction();
         }
 
         private void CmdWrapper_Failed(object sender, IncommingTextEventArgs e)

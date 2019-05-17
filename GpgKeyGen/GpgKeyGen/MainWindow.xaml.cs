@@ -28,6 +28,7 @@ namespace GpgKeyGen
         {
             InitializeComponent();
             CurrentParams = new GeneratorParamsModel();
+            CurrentParams.ClearPasswordFunction = ClearPasswordAfterSend;
             DataContext = CurrentParams;
         }
 
@@ -40,6 +41,11 @@ namespace GpgKeyGen
         private void PasswordChanged(object sender, RoutedEventArgs e)
         {
             CurrentParams.Password = KeyPwd.Password;
+        }
+
+        public void ClearPasswordAfterSend()
+        {
+            KeyPwd.Password = string.Empty;
         }
     }
 }
