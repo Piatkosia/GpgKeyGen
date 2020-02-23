@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 
 namespace GpgKeyGen.Ui.Tests
 {
@@ -16,10 +11,10 @@ namespace GpgKeyGen.Ui.Tests
             par.Comment = "usdvuyfsgdf";
             par.Email = "iasgf@sd.pl";
             par.Password = "uiadfusdif";
-            par.OneDay = true;
+            par.Limited = true;
             par.Username = "asygfuysgfigreg";
             var tosend = par.ToGpgKeygenParams();
-            Assert.True(tosend.ExpiredInDays == 1);
+            Assert.True(tosend.ExpiredInDays != 0);
         }
         [Fact]
         public void ParamsConverter_IfNotForCommission_Returns0asExpiredInDays()
@@ -28,7 +23,7 @@ namespace GpgKeyGen.Ui.Tests
             par.Comment = "usdvuyfsgdf";
             par.Email = "iasgf@sd.pl";
             par.Password = "uiadfusdif";
-            par.OneDay = false;
+            par.Limited = false;
             par.Username = "asygfuysgfigreg";
             var tosend = par.ToGpgKeygenParams();
             Assert.True(tosend.ExpiredInDays == 0);

@@ -65,20 +65,20 @@ namespace GpgKeyGen
         {
             get
             {
-                if (OneDay) return "Nazwa głosowania:";
+                if (Limited) return "Nazwa głosowania:";
                 else return "Imię i nazwisko:";
             }
            
         }
 
-        private bool _oneDay;
+        private bool _limited;
 
-        public bool OneDay
+        public bool Limited
         {
-            get { return _oneDay; }
+            get { return _limited; }
             set
             {
-                SetProperty(ref _oneDay, value);
+                SetProperty(ref _limited, value);
                 GenerateCommand.RaiseCanExecuteChanged();
                 OnPropertyChanged(nameof(NameString));
             }
@@ -164,7 +164,7 @@ namespace GpgKeyGen
             Comment = string.Empty;
             Email = string.Empty;
             Password = string.Empty;
-            OneDay = false;
+            Limited = false;
             ClearPasswordFunction();
         }
 
@@ -195,7 +195,7 @@ namespace GpgKeyGen
             {
                 Comment = this.Comment,
                 Email = this.Email,
-                ExpiredInDays = OneDay ? 1 : 0,
+                ExpiredInDays = Limited ? Properties.Settings.Default.ExpAfterDays : 0,
                 Password = this.Password,
                 Username = this.Username,
             };

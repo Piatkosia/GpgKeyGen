@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
@@ -72,6 +74,12 @@ namespace GpgKeyGen
             {
                 model.DocumentPath = path;
             }
+        }
+
+        private void UIElement_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

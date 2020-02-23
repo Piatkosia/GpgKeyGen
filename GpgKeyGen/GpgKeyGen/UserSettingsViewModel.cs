@@ -34,11 +34,17 @@ namespace GpgKeyGen
             }
         }
         private string _documentPath;
+        private int _expAfterDays;
 
         public string DocumentPath
         {
             get { return _documentPath; }
             set { SetProperty(ref _documentPath, value); }
+        }
+        public int ExpAfterDays
+        {
+            get { return _expAfterDays; }
+            set { SetProperty(ref _expAfterDays, value); }
         }
 
         public DelegateCommand SaveCommand { get; private set; }
@@ -64,6 +70,7 @@ namespace GpgKeyGen
             Path = Properties.Settings.Default.LocalKeyPath;
             Address = Properties.Settings.Default.KeyServer;
             DocumentPath = Properties.Settings.Default.DocumentOutputPath;
+            ExpAfterDays = Properties.Settings.Default.ExpAfterDays;
         }
 
        
@@ -73,6 +80,7 @@ namespace GpgKeyGen
             Properties.Settings.Default.LocalKeyPath = Path;
             Properties.Settings.Default.KeyServer = Address;
             Properties.Settings.Default.DocumentOutputPath = DocumentPath;
+            Properties.Settings.Default.ExpAfterDays = ExpAfterDays;
             Properties.Settings.Default.Save();
             CloseView();
         }

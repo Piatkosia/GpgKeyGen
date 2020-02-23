@@ -58,5 +58,17 @@ namespace GpgKeyGen.Properties {
                 this["DocumentOutputPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int ExpAfterDays {
+            get {
+                return ((int)(this["ExpAfterDays"]));
+            }
+            set {
+                this["ExpAfterDays"] = value;
+            }
+        }
     }
 }
