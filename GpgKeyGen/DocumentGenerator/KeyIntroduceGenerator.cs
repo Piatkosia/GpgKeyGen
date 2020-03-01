@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GeneralUtils;
 
 namespace DocumentGenerator
 {
@@ -14,8 +15,8 @@ namespace DocumentGenerator
         public void GenerateDocument(string path, string keyID, string username)
         {
             DocumentCreator dc = new DocumentCreator();
+            
             dc.AddString("Date", DateTime.Now.ToShortDateString());
-            dc.AddString("Username", username);
             dc.AddString("keyID", keyID);
             var outputPath = $"{path}//Oswiadczenie.rtf";
             dc.CreateDocument(inputPath, outputPath);
