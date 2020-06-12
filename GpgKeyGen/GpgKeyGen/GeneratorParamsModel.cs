@@ -148,6 +148,7 @@ namespace GpgKeyGen
             {
                 await RunGpgCommand(cmdWrapper,
                     $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");
+                CmdOutputString += "Zakończono wysyłanie" + System.Environment.NewLine;
             }
 
             if (!Limited)
@@ -157,6 +158,7 @@ namespace GpgKeyGen
                 {
                     KeyIntroduceGenerator generator = new KeyIntroduceGenerator();
                     generator.GenerateDocument(Properties.Settings.Default.DocumentOutputPath, keyId, Username);
+                    CmdOutputString += "Zakończono tworzenie dokumentów" + System.Environment.NewLine;
                 }
             }
 
