@@ -149,10 +149,15 @@ namespace GpgKeyGen
                 await RunGpgCommand(cmdWrapper,
                     $" --keyserver {Properties.Settings.Default.KeyServer}  --send-key {keyId}");
             }
-            if (MessageBox.Show("Czy przygotować dokument dla nowo wygenerowanego klucza?", "Pytanie", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+
+            if (!Limited)
             {
-                KeyIntroduceGenerator generator = new KeyIntroduceGenerator();
-                generator.GenerateDocument(Properties.Settings.Default.DocumentOutputPath, keyId, Username);
+                if (MessageBox.Show("Czy przygotować dokument dla nowo wygenerowanego klucza?", "Pytanie",
+                        MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                {
+                    KeyIntroduceGenerator generator = new KeyIntroduceGenerator();
+                    generator.GenerateDocument(Properties.Settings.Default.DocumentOutputPath, keyId, Username);
+                }
             }
 
             ClearFields();
